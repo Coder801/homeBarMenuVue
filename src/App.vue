@@ -1,36 +1,35 @@
 <template>
   <div id="app">
     <Navigation></Navigation>
-    <component :is="component"></component>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
 import Navigation from './components/Navigation'
-import Alcohol from './components/Alcohol'
-import Cocktails from './components/Cocktails'
 
 export default {
   name: 'app',
-  data () {
-    return {
-      component: 'alcohol'
-    }
-  },
   components: {
-    Navigation,
-    Alcohol,
-    Cocktails
+    Navigation
   }
 }
+
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+  body {
+    background-color: #E8EEF2;
+    font-family: Helvetica, sans-serif;
+    font-size: 18px;
+    color: #3c4859;
+  }
+
+  #app {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+  }
 </style>
